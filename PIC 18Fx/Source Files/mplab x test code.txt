@@ -1,0 +1,118 @@
+       /* // Logic to echo received data
+        R485_RW_SetLow();    
+        if(EUSART1_is_rx_ready())
+            {
+                rxData = EUSART1_Read();
+                R485_RW_SetHigh();
+                if(EUSART1_is_tx_ready())
+                {
+                    //  LED1_SetHigh();
+                    EUSART1_Write('A');
+                    EUSART1_Write(rxData);
+                }
+            }
+       //    __delay_ms(500);
+  
+
+EUSART1_Write('A');
+        EUSART1_Write('B');
+        
+        
+        R485_RW_SetLow();
+        data1 = EUSART1_Read();
+        // EUSART1_Write(data1);
+  
+        switch(data1)
+        {
+        case'1':
+        LED1_SetHigh();
+        LED2_SetLow();
+        LED3_SetLow();
+        break;
+        case'2':
+        LED1_SetLow();
+        LED2_SetHigh();
+        LED3_SetLow();
+        break;
+        case'3':
+        LED1_SetLow();
+        LED2_SetLow();
+        LED3_SetHigh(); 
+        break;     
+       }
+    
+      
+         
+}
+
+
+  //default:
+        //send_string("Wrong");
+    
+     //   printf("Wrong key pressed\n\r");
+      
+    /*
+     __delay_ms(1000);
+    LED1_SetLow();
+    LED2_SetLow();
+    LED3_SetLow();
+     */ 
+    
+         // __delay_ms(500);
+         
+        //  printf("\n\rWelcome\n\r");
+        //  printf("\n\rtype '%c'",getch());
+        // Add your application code
+
+
+  //data2 = EUSART2_Read();
+    //EUSART2_Write(data2);
+    //send_string("\n\r");
+    //printf("123\n\r");
+    //LEDBoard_SetHigh();
+    //__delay_ms(500);
+    //LEDBoard_SetLow();
+    //__delay_ms(500);
+    
+    //Receive something from serial monitor//
+    
+    //R485_RW_SetLow();
+    //data1 = EUSART1_Read();
+    //EUSART1_Write(data1);
+    //data2 = EUSART2_Read();
+    //EUSART2_Write(data2);
+    //send_string("\n\r");
+    
+    
+    
+       /* 
+        LED1_SetHigh();
+        LED2_SetLow();
+        LED3_SetLow();
+        */
+    //Print Something in Serial Monitor//
+   // __delay_ms(1000);
+    //  LED1_SetHigh();
+    //__delay_ms(1000);
+    //LED1_SetLow();
+    //__delay_ms(1000);
+    //EUSART1_Write('A');
+    //EUSART1_Write('H');
+    //__delay_ms(1000);    
+        
+        
+    //send_string("1,2,3");    
+        
+     //__delay_ms(1000);   
+    
+    //printf("Hello1!\n\r");
+    //LEDBoard_SetHigh();
+    //__delay_ms(1000);
+    //LEDBoard_SetLow();
+    //__delay_ms(1000);
+    //__delay_ms(1000);
+    //printf("Hello2!\n\r");
+    //LEDBoard_SetHigh();
+    //__delay_ms(2000);
+    //LEDBoard_SetLow();
+    //__delay_ms(1000);

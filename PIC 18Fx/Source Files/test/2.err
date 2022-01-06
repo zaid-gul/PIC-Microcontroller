@@ -1,0 +1,4 @@
+Warning[2002] D:\SOFTWARE DATA\PIC 18 MPLAB\test\2.c 3 : unknown pragma 'OSC'
+Warning[2002] D:\SOFTWARE DATA\PIC 18 MPLAB\test\2.c 4 : unknown pragma 'PWRT'
+Warning[2002] D:\SOFTWARE DATA\PIC 18 MPLAB\test\2.c 5 : unknown pragma 'WDT'
+Warning[2002] D:\SOFTWARE DATA\PIC 18 MPLAB\test\2.c 6 : unknown pragma 'DEBUG'

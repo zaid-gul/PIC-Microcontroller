@@ -1,0 +1,76 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005     main.@SCRATCH1
+006     @delay_ms1.P1
+F55     CCP_5
+F55     CCP_5_LOW
+F56     CCP_5_HIGH
+F58     CCP_4
+F58     CCP_4_LOW
+F59     CCP_4_HIGH
+F5E     CCP_3_LOW
+F5E     CCP_3
+F5F     CCP_3_HIGH
+F67     CCP_2
+F67     CCP_2_LOW
+F68     CCP_2_HIGH
+F78.6   C2OUT
+F79.6   C1OUT
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0004  @delay_ms1
+002E  main
+002E  @cinit1
+0054  @cinit2
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Tahir\MPLABXProjects\c.X\
+
+Project Files:
+    main.c                                                  [31-Jul-18 20:18  CRC=A02F53CD]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F46K22.h [28-Feb-12 13:44  CRC=C162B767]
+
+Source signature=22F4C29B
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F46K22
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __18F46K22 1
+
+Output Files:
+    Errors:      build\default\production\main.err
+    Ext Symbols: build\default\production\main.esym
+    INHX32:      build\default\production\main.hex
+    Symbols:     build\default\production\main.sym
+    List:        build\default\production\main.lst
+    Debug/COFF:  build\default\production\main.cof
+    Project:     main.PJT
+    Call Tree:   build\default\production\main.tre
+    Statistics:  build\default\production\main.STA

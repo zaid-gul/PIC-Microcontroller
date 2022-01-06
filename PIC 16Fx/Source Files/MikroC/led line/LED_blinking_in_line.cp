@@ -1,0 +1,35 @@
+#line 1 "C:/Users/ZAID/Documents/MikroC/led line/LED_blinking_in_line.c"
+ void main()
+ {
+ TRISB=0X00;
+ PORTB=1;
+ DELAY_ms(100);
+ PORTB=2;
+ DELAY_ms(100);
+ PORTB=4;
+ DELAY_ms(100);
+ PORTB=8;
+ DELAY_ms(100);
+ PORTB=16;
+ DELAY_ms(100);
+ PORTB=32;
+ DELAY_ms(100);
+ PORTB=64;
+ DELAY_ms(100);
+ PORTB=128;
+ DELAY_ms(100);
+ PORTB=64;
+ DELAY_ms(100);
+ PORTB=32;
+ DELAY_ms(100);
+ PORTB=16;
+ DELAY_ms(100);
+ PORTB=8;
+ DELAY_ms(100);
+ PORTB=4;
+ DELAY_ms(100);
+ PORTB=2;
+ DELAY_ms(100);
+ PORTB=1;
+ DELAY_ms(100);
+ }

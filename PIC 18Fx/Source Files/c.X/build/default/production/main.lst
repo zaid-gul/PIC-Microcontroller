@@ -1,0 +1,121 @@
+CCS PCH C Compiler, Version 4.130, 26695               01-Nov-19 16:16
+
+               Filename: C:\Users\Tahir\MPLABXProjects\c.X\build\default\production\main.lst
+
+               ROM used: 128 bytes (0%)
+                         Largest free fragment is 65408
+               RAM used: 5 (0%) at main() level
+                         6 (0%) worst case
+               Stack:    1 locations
+
+*
+00000:  GOTO   002E
+.................... /*  
+....................  * File:   main.c 
+....................  * Author: Tahir 
+....................  * 
+....................  * Created on July 31, 2018, 8:05 PM 
+....................  */ 
+....................  
+.................... #ifndef BAUDRATE            // if baudrate for RS485 has not been defined in config or main c file.  
+....................     #define BAUDRATE 4800 
+.................... #endif 
+....................  
+.................... #include <18F46K22.h>       // Including Microcontroller specific header file.  
+.................... //////// Standard Header file for the PIC18F46K22 device //////////////// 
+.................... #device PIC18F46K22 
+.................... #list 
+....................  
+.................... #device ADC=10              // ADC resolution bits setting.  
+.................... #FUSES  HSH                 // High speed external oscilator selected 
+.................... #FUSES  NOPLLEN             // PLL disabled. 
+.................... #FUSES  WDT32768//WDT4096   // Watchdog prescaler  
+.................... #FUSES  NOBROWNOUT//BORV19  // Brown out Disabled.  
+.................... #use delay(clock=16000000)  // 16 Mhz clock selected. 
+00004:  CLRF   FEA
+00006:  MOVLW  06
+00008:  MOVWF  FE9
+0000A:  MOVF   FEF,W
+0000C:  BZ    002A
+0000E:  MOVLW  05
+00010:  MOVWF  01
+00012:  CLRF   00
+00014:  DECFSZ 00,F
+00016:  BRA    0014
+00018:  DECFSZ 01,F
+0001A:  BRA    0012
+0001C:  MOVLW  2E
+0001E:  MOVWF  00
+00020:  DECFSZ 00,F
+00022:  BRA    0020
+00024:  BRA    0026
+00026:  DECFSZ FEF,F
+00028:  BRA    000E
+0002A:  GOTO   006C (RETURN)
+....................  
+.................... #define LED PIN_A5 
+.................... /* 
+....................  *  
+....................  */ 
+.................... int main() { 
+0002E:  CLRF   FF8
+00030:  BCF    FD0.7
+00032:  CLRF   FEA
+00034:  CLRF   FE9
+00036:  MOVLB  1
+00038:  CLRF   x88
+0003A:  MOVF   FC1,W
+0003C:  ANDLW  F0
+0003E:  MOVWF  FC1
+00040:  MOVLW  00
+00042:  MOVLB  F
+00044:  MOVWF  x38
+00046:  MOVWF  x3C
+00048:  MOVWF  x39
+0004A:  MOVWF  x3A
+0004C:  MOVWF  x3B
+0004E:  CLRF   F77
+00050:  CLRF   F78
+00052:  CLRF   F79
+....................     set_tris_a(0); 
+00054:  MOVLW  00
+00056:  MOVWF  F92
+....................     output_a(0); 
+00058:  CLRF   F92
+0005A:  CLRF   F89
+....................     while(1) 
+....................     { 
+....................     output_toggle(LED); 
+0005C:  BCF    F92.5
+0005E:  BTG    F89.5
+....................     delay_ms(500); 
+00060:  MOVLW  02
+00062:  MOVWF  05
+00064:  MOVLW  FA
+00066:  MOVWF  06
+00068:  MOVLB  0
+0006A:  BRA    0004
+0006C:  DECFSZ 05,F
+0006E:  BRA    0072
+00070:  BRA    0076
+00072:  MOVLB  F
+00074:  BRA    0064
+....................     output_toggle(LED); 
+00076:  BCF    F92.5
+00078:  BTG    F89.5
+....................  
+....................     } 
+0007A:  MOVLB  F
+0007C:  BRA    005C
+.................... } 
+....................  
+0007E:  SLEEP 
+
+Configuration Fuses:
+   Word  1: E200   HSH NOPLLEN PRIMARY_ON FCMEN IESO
+   Word  2: 3C18   PUT NOBROWNOUT BORV19 NOWDT WDT32768
+   Word  3: BF00   CCP2C1 PBADEN CCP3B5 HFOFST TIMER3C0 CCP2D2 MCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB
